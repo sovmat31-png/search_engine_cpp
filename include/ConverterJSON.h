@@ -1,18 +1,14 @@
 #pragma once
+
 #include <vector>
 #include <string>
-#include <fstream>
-#include <nlohmann/json.hpp>
+#include <utility>
+#include "nlohmann/json.hpp"
 
 class ConverterJSON {
 public:
-
     std::vector<std::string> GetTextDocuments();
-
     int GetResponsesLimit();
-
     std::vector<std::string> GetRequests();
-
-    void putAnswers(std::vector<std::vector<std::pair<int, float>>> answers);
-
+    void putAnswers(const std::vector<std::vector<std::pair<int, float>>>& answers);
 };

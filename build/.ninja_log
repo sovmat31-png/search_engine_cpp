@@ -1,6 +1,0 @@
-# ninja log v7
-42	1693	7952804570920702	CMakeFiles/search_engine.dir/src/SearchServer.cpp.obj	144b0a79eeac223
-36	1759	7952804570836835	CMakeFiles/search_engine.dir/src/InvertedIndex.cpp.obj	6325134517c86052
-70	3793	7952806530271562	CMakeFiles/search_engine.dir/src/ConverterJSON.cpp.obj	f89b1e7cc3e16a3d
-38	1531	7952808921437569	CMakeFiles/search_engine.dir/src/main.cpp.obj	b6a33cf7df941eaa
-1532	1883	7952808936388187	search_engine.exe	49dcfb1698fee26e

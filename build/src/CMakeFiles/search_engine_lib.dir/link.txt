@@ -1,0 +1,2 @@
+C:\msys64\mingw64\bin\ar.exe qc libsearch_engine_lib.a CMakeFiles/search_engine_lib.dir/SearchServer.cpp.obj CMakeFiles/search_engine_lib.dir/InvertedIndex.cpp.obj CMakeFiles/search_engine_lib.dir/ConverterJSON.cpp.obj
+C:\msys64\mingw64\bin\ranlib.exe libsearch_engine_lib.a

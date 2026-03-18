@@ -1,99 +1,110 @@
-#include <iostream>
 #include "ConverterJSON.h"
+#include <fstream>
+#include <stdexcept>
 
 using json = nlohmann::json;
 
+// Получить список документов
 std::vector<std::string> ConverterJSON::GetTextDocuments() {
-
     std::ifstream file("config.json");
 
-    if (!file.is_open())
-        throw std::runtime_error("config file is missing");
-
-    json config;
-    file >> config;
-
-    if (config["config"].empty())
-        throw std::runtime_error("config file is empty");
-
-    std::vector<std::string> docs;
-
-    for (auto &path : config["files"]) {
-
-        std::ifstream doc(path);
-
-        if (!doc.is_open()) {
-            std::cout << "file not found: " << path << std::endl;
-            continue;
-        }
-
-        std::string content(
-            (std::istreambuf_iterator<char>(doc)),
-            std::istreambuf_iterator<char>()
-        );
-
-        docs.push_back(content);
+    if (!file.is_open()) {
+        throw std::runtime_error("config.json is missing");
     }
 
-    return docs;
-}
-
-int ConverterJSON::GetResponsesLimit() {
-
-    std::ifstream file("config.json");
-
     json config;
     file >> config;
-
-    if (config["config"].contains("max_responses"))
-        return config["config"]["max_responses"];
-
-    return 5;
-}
-
-std::vector<std::string> ConverterJSON::GetRequests() {
-
-    std::ifstream file("requests.json");
-
-    json requests;
-    file >> requests;
 
     std::vector<std::string> result;
 
-    for (auto &req : requests["requests"])
-        result.push_back(req);
+    if (config.contains("files")) {
+        for (const auto& file_path : config["files"]) {
+            std::ifstream doc(file_path);
+
+            if (!doc.is_open()) {
+                throw std::runtime_error("Document file is missing: " + file_path.get<std::string>());
+            }
+
+            std::string content(
+                (std::istreambuf_iterator<char>(doc)),
+                std::istreambuf_iterator<char>()
+            );
+
+            result.push_back(content);
+        }
+    }
 
     return result;
 }
 
-void ConverterJSON::putAnswers(std::vector<std::vector<std::pair<int, float>>> answers) {
+// Получить количество ответов
+int ConverterJSON::GetResponsesLimit() {
+    std::ifstream file("config.json");
+
+    if (!file.is_open()) {
+        throw std::runtime_error("config.json is missing");
+    }
+
+    json config;
+    file >> config;
+
+    if (config.contains("config") && config["config"].contains("max_responses")) {
+        return config["config"]["max_responses"];
+    }
+
+    return 5; // значение по умолчанию
+}
+
+// Получить запросы
+std::vector<std::string> ConverterJSON::GetRequests() {
+    std::ifstream file("requests.json");
+
+    if (!file.is_open()) {
+        throw std::runtime_error("requests.json is missing");
+    }
+
+    json requests_json;
+    file >> requests_json;
+
+    std::vector<std::string> requests;
+
+    if (requests_json.contains("requests")) {
+        for (const auto& req : requests_json["requests"]) {
+            requests.push_back(req);
+        }
+    }
+
+    return requests;
+}
+
+// Записать ответы
+void ConverterJSON::putAnswers(const std::vector<std::vector<std::pair<int, float>>>& answers) {
+    std::ofstream out("answers.json");
+
+    if (!out.is_open()) {
+        throw std::runtime_error("answers.json is missing");
+    }
 
     json result;
     result["answers"] = json::object();
 
-    for (int i = 0; i < answers.size(); i++) {
-
-        std::string req = "request" + std::string(3 - std::to_string(i+1).length(), '0') + std::to_string(i+1);
+    for (size_t i = 0; i < answers.size(); ++i) {
+        std::string request_id = "request" + std::string(3 - std::to_string(i + 1).length(), '0') + std::to_string(i + 1);
 
         if (answers[i].empty()) {
-            result["answers"][req]["result"] = false;
-            continue;
-        }
+            result["answers"][request_id]["result"] = false;
+        } else {
+            result["answers"][request_id]["result"] = true;
+            result["answers"][request_id]["relevance"] = json::array();
 
-        result["answers"][req]["result"] = true;
-
-        for (auto &ans : answers[i]) {
-
-            json elem;
-
-            elem["docid"] = ans.first;
-            elem["rank"] = ans.second;
-
-            result["answers"][req]["relevance"].push_back(elem);
+            for (const auto& [docid, rank] : answers[i]) {
+                result["answers"][request_id]["relevance"].push_back({
+                    {"docid", docid},
+                    {"rank", rank}
+                });
+            }
         }
     }
-
-    std::ofstream out("answers.json");
 
     out << result.dump(4);
 }

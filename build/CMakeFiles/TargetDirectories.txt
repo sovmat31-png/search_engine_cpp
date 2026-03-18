@@ -1,3 +1,9 @@
-D:/Task/search_engine/build/CMakeFiles/search_engine.dir
 D:/Task/search_engine/build/CMakeFiles/edit_cache.dir
 D:/Task/search_engine/build/CMakeFiles/rebuild_cache.dir
+D:/Task/search_engine/build/src/CMakeFiles/search_engine_lib.dir
+D:/Task/search_engine/build/src/CMakeFiles/search_engine.dir
+D:/Task/search_engine/build/src/CMakeFiles/edit_cache.dir
+D:/Task/search_engine/build/src/CMakeFiles/rebuild_cache.dir
+D:/Task/search_engine/build/tests/CMakeFiles/search_engine_tests.dir
+D:/Task/search_engine/build/tests/CMakeFiles/edit_cache.dir
+D:/Task/search_engine/build/tests/CMakeFiles/rebuild_cache.dir
