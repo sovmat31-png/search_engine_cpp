@@ -82,7 +82,7 @@ void ConverterJSON::putAnswers(const std::vector<std::vector<std::pair<int, floa
     std::ofstream out("answers.json");
 
     if (!out.is_open()) {
-        throw std::runtime_error("answers.json is missing");
+        throw std::runtime_error("Cannot open answers.json for writing");
     }
 
     json result;
@@ -107,4 +107,8 @@ void ConverterJSON::putAnswers(const std::vector<std::vector<std::pair<int, floa
     }
 
     out << result.dump(4);
+
+if (!out) {
+    throw std::runtime_error("Error writing to answers.json");
+}
 }
