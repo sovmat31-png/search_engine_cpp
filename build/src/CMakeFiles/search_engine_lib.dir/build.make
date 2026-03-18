@@ -43,10 +43,10 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = C:\msys64\mingw64\bin\cmake.exe
+CMAKE_COMMAND = "C:\Program Files\CMake\bin\cmake.exe"
 
 # The command to remove a file.
-RM = C:\msys64\mingw64\bin\cmake.exe -E rm -f
+RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -76,45 +76,45 @@ src/CMakeFiles/search_engine_lib.dir/SearchServer.cpp.obj: src/CMakeFiles/search
 src/CMakeFiles/search_engine_lib.dir/SearchServer.cpp.obj: D:/Task/search_engine/src/SearchServer.cpp
 src/CMakeFiles/search_engine_lib.dir/SearchServer.cpp.obj: src/CMakeFiles/search_engine_lib.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Task\search_engine\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/search_engine_lib.dir/SearchServer.cpp.obj"
-	cd /d D:\Task\search_engine\build\src && C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/search_engine_lib.dir/SearchServer.cpp.obj -MF CMakeFiles\search_engine_lib.dir\SearchServer.cpp.obj.d -o CMakeFiles\search_engine_lib.dir\SearchServer.cpp.obj -c D:\Task\search_engine\src\SearchServer.cpp
+	cd /d D:\Task\search_engine\build\src && C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/search_engine_lib.dir/SearchServer.cpp.obj -MF CMakeFiles\search_engine_lib.dir\SearchServer.cpp.obj.d -o CMakeFiles\search_engine_lib.dir\SearchServer.cpp.obj -c D:\Task\search_engine\src\SearchServer.cpp
 
 src/CMakeFiles/search_engine_lib.dir/SearchServer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/search_engine_lib.dir/SearchServer.cpp.i"
-	cd /d D:\Task\search_engine\build\src && C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Task\search_engine\src\SearchServer.cpp > CMakeFiles\search_engine_lib.dir\SearchServer.cpp.i
+	cd /d D:\Task\search_engine\build\src && C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Task\search_engine\src\SearchServer.cpp > CMakeFiles\search_engine_lib.dir\SearchServer.cpp.i
 
 src/CMakeFiles/search_engine_lib.dir/SearchServer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/search_engine_lib.dir/SearchServer.cpp.s"
-	cd /d D:\Task\search_engine\build\src && C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Task\search_engine\src\SearchServer.cpp -o CMakeFiles\search_engine_lib.dir\SearchServer.cpp.s
+	cd /d D:\Task\search_engine\build\src && C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Task\search_engine\src\SearchServer.cpp -o CMakeFiles\search_engine_lib.dir\SearchServer.cpp.s
 
 src/CMakeFiles/search_engine_lib.dir/InvertedIndex.cpp.obj: src/CMakeFiles/search_engine_lib.dir/flags.make
 src/CMakeFiles/search_engine_lib.dir/InvertedIndex.cpp.obj: src/CMakeFiles/search_engine_lib.dir/includes_CXX.rsp
 src/CMakeFiles/search_engine_lib.dir/InvertedIndex.cpp.obj: D:/Task/search_engine/src/InvertedIndex.cpp
 src/CMakeFiles/search_engine_lib.dir/InvertedIndex.cpp.obj: src/CMakeFiles/search_engine_lib.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Task\search_engine\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/search_engine_lib.dir/InvertedIndex.cpp.obj"
-	cd /d D:\Task\search_engine\build\src && C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/search_engine_lib.dir/InvertedIndex.cpp.obj -MF CMakeFiles\search_engine_lib.dir\InvertedIndex.cpp.obj.d -o CMakeFiles\search_engine_lib.dir\InvertedIndex.cpp.obj -c D:\Task\search_engine\src\InvertedIndex.cpp
+	cd /d D:\Task\search_engine\build\src && C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/search_engine_lib.dir/InvertedIndex.cpp.obj -MF CMakeFiles\search_engine_lib.dir\InvertedIndex.cpp.obj.d -o CMakeFiles\search_engine_lib.dir\InvertedIndex.cpp.obj -c D:\Task\search_engine\src\InvertedIndex.cpp
 
 src/CMakeFiles/search_engine_lib.dir/InvertedIndex.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/search_engine_lib.dir/InvertedIndex.cpp.i"
-	cd /d D:\Task\search_engine\build\src && C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Task\search_engine\src\InvertedIndex.cpp > CMakeFiles\search_engine_lib.dir\InvertedIndex.cpp.i
+	cd /d D:\Task\search_engine\build\src && C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Task\search_engine\src\InvertedIndex.cpp > CMakeFiles\search_engine_lib.dir\InvertedIndex.cpp.i
 
 src/CMakeFiles/search_engine_lib.dir/InvertedIndex.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/search_engine_lib.dir/InvertedIndex.cpp.s"
-	cd /d D:\Task\search_engine\build\src && C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Task\search_engine\src\InvertedIndex.cpp -o CMakeFiles\search_engine_lib.dir\InvertedIndex.cpp.s
+	cd /d D:\Task\search_engine\build\src && C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Task\search_engine\src\InvertedIndex.cpp -o CMakeFiles\search_engine_lib.dir\InvertedIndex.cpp.s
 
 src/CMakeFiles/search_engine_lib.dir/ConverterJSON.cpp.obj: src/CMakeFiles/search_engine_lib.dir/flags.make
 src/CMakeFiles/search_engine_lib.dir/ConverterJSON.cpp.obj: src/CMakeFiles/search_engine_lib.dir/includes_CXX.rsp
 src/CMakeFiles/search_engine_lib.dir/ConverterJSON.cpp.obj: D:/Task/search_engine/src/ConverterJSON.cpp
 src/CMakeFiles/search_engine_lib.dir/ConverterJSON.cpp.obj: src/CMakeFiles/search_engine_lib.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Task\search_engine\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/search_engine_lib.dir/ConverterJSON.cpp.obj"
-	cd /d D:\Task\search_engine\build\src && C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/search_engine_lib.dir/ConverterJSON.cpp.obj -MF CMakeFiles\search_engine_lib.dir\ConverterJSON.cpp.obj.d -o CMakeFiles\search_engine_lib.dir\ConverterJSON.cpp.obj -c D:\Task\search_engine\src\ConverterJSON.cpp
+	cd /d D:\Task\search_engine\build\src && C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/search_engine_lib.dir/ConverterJSON.cpp.obj -MF CMakeFiles\search_engine_lib.dir\ConverterJSON.cpp.obj.d -o CMakeFiles\search_engine_lib.dir\ConverterJSON.cpp.obj -c D:\Task\search_engine\src\ConverterJSON.cpp
 
 src/CMakeFiles/search_engine_lib.dir/ConverterJSON.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/search_engine_lib.dir/ConverterJSON.cpp.i"
-	cd /d D:\Task\search_engine\build\src && C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Task\search_engine\src\ConverterJSON.cpp > CMakeFiles\search_engine_lib.dir\ConverterJSON.cpp.i
+	cd /d D:\Task\search_engine\build\src && C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Task\search_engine\src\ConverterJSON.cpp > CMakeFiles\search_engine_lib.dir\ConverterJSON.cpp.i
 
 src/CMakeFiles/search_engine_lib.dir/ConverterJSON.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/search_engine_lib.dir/ConverterJSON.cpp.s"
-	cd /d D:\Task\search_engine\build\src && C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Task\search_engine\src\ConverterJSON.cpp -o CMakeFiles\search_engine_lib.dir\ConverterJSON.cpp.s
+	cd /d D:\Task\search_engine\build\src && C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Task\search_engine\src\ConverterJSON.cpp -o CMakeFiles\search_engine_lib.dir\ConverterJSON.cpp.s
 
 # Object files for target search_engine_lib
 search_engine_lib_OBJECTS = \

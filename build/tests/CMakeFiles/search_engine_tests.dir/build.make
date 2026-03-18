@@ -43,10 +43,10 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = C:\msys64\mingw64\bin\cmake.exe
+CMAKE_COMMAND = "C:\Program Files\CMake\bin\cmake.exe"
 
 # The command to remove a file.
-RM = C:\msys64\mingw64\bin\cmake.exe -E rm -f
+RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -76,15 +76,15 @@ tests/CMakeFiles/search_engine_tests.dir/test.cpp.obj: tests/CMakeFiles/search_e
 tests/CMakeFiles/search_engine_tests.dir/test.cpp.obj: D:/Task/search_engine/tests/test.cpp
 tests/CMakeFiles/search_engine_tests.dir/test.cpp.obj: tests/CMakeFiles/search_engine_tests.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Task\search_engine\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object tests/CMakeFiles/search_engine_tests.dir/test.cpp.obj"
-	cd /d D:\Task\search_engine\build\tests && C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT tests/CMakeFiles/search_engine_tests.dir/test.cpp.obj -MF CMakeFiles\search_engine_tests.dir\test.cpp.obj.d -o CMakeFiles\search_engine_tests.dir\test.cpp.obj -c D:\Task\search_engine\tests\test.cpp
+	cd /d D:\Task\search_engine\build\tests && C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT tests/CMakeFiles/search_engine_tests.dir/test.cpp.obj -MF CMakeFiles\search_engine_tests.dir\test.cpp.obj.d -o CMakeFiles\search_engine_tests.dir\test.cpp.obj -c D:\Task\search_engine\tests\test.cpp
 
 tests/CMakeFiles/search_engine_tests.dir/test.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/search_engine_tests.dir/test.cpp.i"
-	cd /d D:\Task\search_engine\build\tests && C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Task\search_engine\tests\test.cpp > CMakeFiles\search_engine_tests.dir\test.cpp.i
+	cd /d D:\Task\search_engine\build\tests && C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Task\search_engine\tests\test.cpp > CMakeFiles\search_engine_tests.dir\test.cpp.i
 
 tests/CMakeFiles/search_engine_tests.dir/test.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/search_engine_tests.dir/test.cpp.s"
-	cd /d D:\Task\search_engine\build\tests && C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Task\search_engine\tests\test.cpp -o CMakeFiles\search_engine_tests.dir\test.cpp.s
+	cd /d D:\Task\search_engine\build\tests && C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Task\search_engine\tests\test.cpp -o CMakeFiles\search_engine_tests.dir\test.cpp.s
 
 # Object files for target search_engine_tests
 search_engine_tests_OBJECTS = \
